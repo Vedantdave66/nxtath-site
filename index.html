@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NXTATH – For the 99%</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #0A0A1F;
+            color: white;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            padding: 60px 20px 100px 20px;
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .container p {
+         margin-bottom: 20px;  /* Adjust value as needed for your design */
+         line-height: 1.6;
+        }
+
+        .container h2 {
+            margin-top: 40px;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        h3.brand {
+            font-size: 54px;
+            margin-bottom: 20px;
+            margin-top: 0;
+            font-weight: 700;
+            color: #FF6F00;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .hero {
+            padding-top: 0;
+            padding-bottom: 60px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #FF6F00;
+            color: white;
+            padding: 15px 25px;
+            margin: 10px;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #e65c00;
+        }
+
+        .icon {
+            margin: 30px auto 24px auto; /* top, right, bottom, left */
+            display: block;
+            width: 100px;
+            height: auto;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25), 0 1.5px 5px rgba(255,111,0,0.15);
+            transition: 
+                transform 0.3s cubic-bezier(.4,2,.6,1), 
+                box-shadow 0.3s cubic-bezier(.4,2,.6,1);
+        }
+
+        .icon:hover {
+            transform: translateY(-8px) scale(1.08);
+            box-shadow: 0 16px 32px rgba(0,0,0,0.35), 0 3px 10px rgba(255,111,0,0.18);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 14px;
+            color: #cccccc;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero"> 
+    <div class="container">
+        <h3 class="brand">NXTATH</h3>
+        <h1>For the 99% who never went pro.</h1>
+        <p>This is where their story begins.</p>
+
+        <a href="submit.html" class="button">Submit Athlete Profile</a>
+        <a href="waitlist.html" class="button">Join the Waitlist</a>
+
+        <br>
+        <img src="nxtath_custom_gada.png" alt="Hanuman Gada Icon" class="icon">
+    </div>
+</div>
+
+<!-- Inspirational Quote Carousel -->
+<div class="carousel-wrapper">
+  <img class="carousel-img" src="ArgWC.png" alt="Winners Don't Quit" />
+  <img class="carousel-img" src="IndWC.png" alt="Champions Are Within" />
+  <img class="carousel-img" src="USATeam.png" alt="Dreamers Are Achievers" />
+</div>
+
+<style>
+.carousel-wrapper {
+  max-width: 960px;
+  width: 90%;
+  margin: 20px auto 40px auto;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-img {
+  width: 100%;
+  display: none;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-img.active {
+  display: block;
+}
+</style>
+
+<script>
+let index = 0;
+const images = document.getElementsByClassName('carousel-img');
+function showNextImage() {
+  for (let i = 0; i < images.length; i++) {
+    images[i].classList.remove("active");
+  }
+  index = (index + 1) % images.length;
+  images[index].classList.add("active");
+}
+images[0].classList.add("active"); // Show the first image
+setInterval(showNextImage, 4000);
+</script>
+
+
+    <div class="container">
+        <h2>What is NXTATH?</h2>
+        <p>NXTATH is the first platform built for amateur athletes to build their personal brand, go viral, earn money, and get discovered — without needing a pro contract.</p>
+
+        <h2>Why It Matters</h2>
+        <p>Instagram wasn’t made for athletes. TikTok was built for views. We built this for <strong>you</strong>.</p>
+        <p>You’re more than highlight clips — you’re the underdog, the workhorse, the grind incarnate. And we see you.</p>
+    </div>
+
+    <footer>
+        Powered by Hanuman. Devoted to the Grind. | &copy; 2025 NXTATH
+    </footer>
+
+</body>
+</html>
